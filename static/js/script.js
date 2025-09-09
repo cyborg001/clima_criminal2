@@ -317,15 +317,17 @@ async function loadStatsPage() {
                 <button id="generateReport">Generar Reporte General</button>
             </div>
         </div>
-        <div id="choroplethMap" style="height: 500px; width: 100%; margin-top: 15px;"></div>
-        <div class="charts" style="display: flex; justify-content: space-around; margin-top: 15px;">
-            <div id="crimeTypeChartContainer" style="width: 45%;">
-                <h3>Gráfico de Crímenes por Tipo</h3>
-                <canvas id="crimeTypeChart"></canvas>
-            </div>
-            <div id="crimeTrendChartContainer" style="width: 45%;">
-                <h3>Gráfico de Crímenes a lo largo del Tiempo</h3>
-                <canvas id="crimeTrendChart"></canvas>
+        <div class="stats-container">
+            <div id="choroplethMap"></div>
+            <div class="charts-container">
+                <div id="crimeTypeChartContainer" class="chart">
+                    <h3>Gráfico de Crímenes por Tipo</h3>
+                    <canvas id="crimeTypeChart"></canvas>
+                </div>
+                <div id="crimeTrendChartContainer" class="chart">
+                    <h3>Gráfico de Crímenes a lo largo del Tiempo</h3>
+                    <canvas id="crimeTrendChart"></canvas>
+                </div>
             </div>
         </div>
     `;

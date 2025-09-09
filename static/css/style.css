@@ -143,3 +143,45 @@ form button:hover {
 .leaflet-popup-content b {
     color: #2c3e50; /* Dark Blue */
 }
+
+/* Stats Page Layout */
+.stats-container {
+    display: flex;
+    flex-direction: row; /* Arrange children side-by-side */
+    gap: 20px;
+    margin-top: 15px;
+    height: 75vh; /* Set a fixed height based on viewport height */
+    width: 100%;
+}
+
+#choroplethMap {
+    flex: 0 0 33%; /* Assign 33% of the width to the map */
+    height: 100%; /* Fill the container height */
+}
+
+.charts-container {
+    flex: 1; /* Take up the remaining space */
+    display: flex;
+    flex-direction: row; /* Arrange charts side-by-side */
+    gap: 20px;
+    height: 100%;
+}
+
+.chart {
+    flex: 1; /* Each chart takes up equal space within the charts-container */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chart h3 {
+    text-align: center;
+    margin-top: 0;
+    flex-shrink: 0;
+}
+
+.chart canvas {
+    flex-grow: 1; /* Allow canvas to grow */
+    max-width: 100%;
+    min-height: 0; /* Important for flexbox resizing */
+}
