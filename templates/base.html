@@ -14,7 +14,7 @@
         <div class="app-title">Clima Criminal</div>
         <nav>
             <ul>
-                <li><a href="{% url 'estadisticas' %}" {% if request.resolver_match.url_name == 'estadisticas' %}class="active"{% endif %}>Inicio</a></li>
+                <li><a href="{% url 'estadisticas' %}" {% if request.resolver_match.url_name == 'estadisticas' %}class="active"{% endif %}>Estadisticas</a></li>
                 <li><a href="{% url 'casos' %}" {% if request.resolver_match.url_name == 'casos' %}class="active"{% endif %}>Casos</a></li>
                 <li><a href="#" id="report-crime-btn">Reportar Crimen</a></li>
             </ul>
@@ -40,8 +40,8 @@
     <!-- Turf.js for spatial analysis -->
     <script src='https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js'></script>
     {% block page_scripts %}{% endblock %}
-    <script src="{% static 'js/script.js' %}"></script>
     <script src="{% static 'js/navbar.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 
     <!-- Report Crime Modal -->
     <div id="report-modal" class="modal">

@@ -216,7 +216,7 @@ function attachFormListeners() {
 // --- STATS PAGE LOGIC ---
 async function loadStatsPage() {
     mainContent.innerHTML = `
-        <h2>Informes Estadísticos</h2>
+        <h2>Estadísticas</h2>
         <div class="filters" style="padding: 10px; background-color: #f5f5f5; border-radius: 5px; display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
             <div>
                 <label for="filterCrimeType">Tipo de Crimen:</label>
@@ -257,15 +257,13 @@ async function loadStatsPage() {
         </div>
         <div class="stats-container">
             <div id="choroplethMap"></div>
-            <div class="charts-container">
-                <div id="crimeTypeChartContainer" class="chart">
-                    <h3>Gráfico de Crímenes por Tipo</h3>
-                    <canvas id="crimeTypeChart"></canvas>
-                </div>
-                <div id="crimeTrendChartContainer" class="chart">
-                    <h3>Gráfico de Crímenes a lo largo del Tiempo</h3>
-                    <canvas id="crimeTrendChart"></canvas>
-                </div>
+            <div id="crimeTypeChartContainer" class="chart">
+                <h3>Gráfico de Crímenes por Tipo</h3>
+                <canvas id="crimeTypeChart"></canvas>
+            </div>
+            <div id="crimeTrendChartContainer" class="chart">
+                <h3>Gráfico de Crímenes a lo largo del Tiempo</h3>
+                <canvas id="crimeTrendChart"></canvas>
             </div>
         </div>
     `;
