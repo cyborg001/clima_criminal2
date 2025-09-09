@@ -11,13 +11,13 @@
 </head>
 <body>
     <header>
+        <div class="app-title">Clima Criminal</div>
         <nav>
             <ul>
-                <li><a href="{% url 'mapa' %}" {% if request.resolver_match.url_name == 'mapa' %}class="active"{% endif %}>Mapa y Estadísticas</a></li>
-                <li><a href="{% url 'reportar' %}" {% if request.resolver_match.url_name == 'reportar' %}class="active"{% endif %}>Reportar Crimen</a></li>
-                <li><a href="{% url 'estadisticas' %}" {% if request.resolver_match.url_name == 'estadisticas' %}class="active"{% endif %}>Informes Estadísticos</a></li>
+                <li><a href="{% url 'estadisticas' %}" {% if request.resolver_match.url_name == 'estadisticas' %}class="active"{% endif %}>Inicio</a></li>
+                <li><a href="{% url 'casos' %}" {% if request.resolver_match.url_name == 'casos' %}class="active"{% endif %}>Casos</a></li>
+                <li><a href="#" id="report-crime-btn">Reportar Crimen</a></li>
             </ul>
-            
         </nav>
     </header>
 
@@ -41,5 +41,16 @@
     <script src='https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js'></script>
     {% block page_scripts %}{% endblock %}
     <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/navbar.js' %}"></script>
+
+    <!-- Report Crime Modal -->
+    <div id="report-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="report-form-container">
+                <!-- The report form will be loaded here by script.js -->
+            </div>
+        </div>
+    </div>
 </body>
 </html>

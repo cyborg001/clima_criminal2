@@ -19,9 +19,8 @@ from django.urls import path, include
 from core import views as core_views
 
 urlpatterns = [
-    path('', core_views.mapa, name='mapa'),
-    path('reportar/', core_views.reportar, name='reportar'),
-    path('estadisticas/', core_views.estadisticas, name='estadisticas'),
+    path('', core_views.estadisticas, name='estadisticas'), # Homepage is now stats
+    path('casos/', core_views.mapa, name='casos'), # Renamed from 'mapa'
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')), # Added API URLs
 ]
