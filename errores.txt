@@ -1,0 +1,4 @@
+error1:
+script.js:531 Uncaught TypeError: heatmap.sync is not a function
+    at loadDualMapPage (script.js:531:13)
+    at HTMLDocument.<anonymous> ((index):50:9)

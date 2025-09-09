@@ -1,0 +1,77 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\geometry{a4paper, margin=1in}
+
+\title{
+    {\huge Clima Criminal: Una Herramienta Geoespacial para el Análisis Delictivo en la República Dominicana} \\
+    \vspace{0.5cm}
+    \large Justificación y Propuesta Técnica
+}
+
+\author{
+    Lic. Carlos G. Ramirez \\
+    \texttt{carlos.ramirez@email.com} % Correo electrónico de ejemplo
+    \and
+    Gemini \\
+    \textit{Modelo de Lenguaje Grande de Google}
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+La República Dominicana, a pesar de los avances en la reducción de ciertas tasas de criminalidad, enfrenta un desafío persistente en materia de delincuencia y una alta percepción de inseguridad ciudadana. Los datos estadísticos, aunque disponibles, a menudo se encuentran dispersos y en formatos que dificultan su análisis por parte del público general, investigadores y organizaciones de la sociedad civil. Este artículo presenta \textbf{Clima Criminal}, una aplicación web interactiva diseñada para centralizar, visualizar y analizar datos delictivos a nivel nacional. La plataforma ofrece herramientas geoespaciales como mapas de calor y mapas coropléticos, filtros de datos dinámicos y generación de informes, con el objetivo de democratizar el acceso a la información, promover la transparencia y ofrecer un recurso valioso para el estudio de los patrones delictivos en el país.
+\end{abstract}
+
+\section{Introducción: El Problema de la Inseguridad}
+
+La seguridad ciudadana es un pilar fundamental para el desarrollo social y económico de cualquier nación. En la República Dominicana, la delincuencia es una de las principales preocupaciones de la población. Según datos oficiales, en 2023 el país registró una tasa de homicidios de \textbf{11.5 por cada 100,000 habitantes}. Si bien esta cifra representa una disminución en comparación con años anteriores, el robo sigue siendo el delito más frecuente, con más de 78,000 casos reportados en el mismo año.
+
+Más allá de las cifras oficiales, la \textit{percepción de inseguridad} tiene un impacto tangible y profundo en la sociedad. Encuestas revelan que una gran parte de los dominicanos ha modificado sus rutinas diarias por temor a ser víctimas de un delito, lo que afecta la cohesión social y la confianza en las instituciones. Esta situación genera una demanda crítica de información clara, accesible y detallada sobre la criminalidad.
+
+\section{Justificación de la Necesidad}
+
+La necesidad de una herramienta como \textbf{Clima Criminal} se fundamenta en tres brechas principales:
+
+\begin{enumerate}
+    \item \textbf{Fragmentación de Datos:} La información sobre delincuencia es publicada por diversas entidades gubernamentales (Policía Nacional, Procuraduría General de la República, Oficina Nacional de Estadística). Esto obliga a los interesados a consultar múltiples fuentes, a menudo con formatos y metodologías distintas, dificultando la obtención de una visión integrada.
+    \item \textbf{Falta de Análisis Geoespacial Accesible:} Los informes estadísticos tradicionales suelen presentar datos agregados a nivel nacional o provincial. Carecen de la granularidad de un mapa interactivo que permita identificar \textit{dónde} se concentran los incidentes, un factor clave para que ciudadanos y autoridades locales tomen decisiones informadas sobre riesgos específicos.
+    \item \textbf{Brecha entre Datos y Percepción Pública:} Una plataforma de datos abierta y de fácil uso puede ayudar a cerrar la brecha entre las estadísticas oficiales y la percepción ciudadana. Al permitir que cualquier persona explore los datos por sí misma, se fomenta un debate público más informado y se fortalece la transparencia.
+\end{enumerate}
+
+\section{La Solución Propuesta: Clima Criminal}
+
+Para abordar estas necesidades, se ha desarrollado la aplicación \textbf{Clima Criminal}. Es una plataforma web construida sobre una pila de tecnologías moderna (Django, JavaScript, Leaflet.js) que ofrece las siguientes funcionalidades clave:
+
+\begin{itemize}
+    \item \textbf{Visualización Interactiva:} Mapas de calor para ver concentraciones de delitos y mapas coropléticos que ilustran la distribución de la criminalidad por provincia.
+    \item \textbf{Filtros Dinámicos:} Permite a los usuarios filtrar datos por tipo de delito, provincia y rangos de fechas, ofreciendo una personalización completa del análisis.
+    \item \textbf{Reporte Ciudadano:} Un formulario para que los ciudadanos reporten incidentes, contribuyendo a una base de datos más rica (actualmente como prueba de concepto).
+    \item \textbf{Estadísticas y Generación de Informes:} Gráficos dinámicos y la capacidad de generar informes imprimibles de los datos filtrados, tanto a nivel general como provincial.
+\end{itemize}
+
+La arquitectura de la aplicación está diseñada para ser escalable, permitiendo la futura integración de nuevas fuentes de datos y módulos de análisis más avanzados.
+
+\section{Conclusión}
+
+\textbf{Clima Criminal} no es solo un visualizador de datos, sino una iniciativa para empoderar a la sociedad dominicana con información accesible y contextualizada. Al proporcionar herramientas para el análisis geoespacial del delito, la plataforma sirve como un recurso valioso para ciudadanos, académicos, periodistas y formuladores de políticas, promoviendo una mayor comprensión de las dinámicas de seguridad en la República Dominicana y fomentando una cultura de toma de decisiones basada en evidencia.
+
+\begin{thebibliography}{9}
+    \bibitem{ONE2023}
+    Oficina Nacional de Estadística (ONE), República Dominicana. (2024). \textit{Anuarios Estadísticos}.
+    
+    \bibitem{PoliciaNacional2024}
+    Policía Nacional de la República Dominicana. (2024). \textit{Informes y Estadísticas Delictivas}.
+    
+    \bibitem{Perception}
+    Estudios sobre la percepción de la inseguridad ciudadana (diversas fuentes periodísticas y académicas, 2023-2024).
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,13 @@
+haraz un archivo llamado procesos listado2.MD donde pondras todos los pasos que daras para completar las 
+siguientes instrucciones e ir cotejandolos a medida que vayas resolviendo los pasos. la lista es la 
+siguiente:
+
+1- en la pagina mapa.html crea otro mapa al lado derecho del mapa de calor, este mapa tendra
+    marcada las locaciones de los crimenes.
+2- en la pagina estadisticas crearas un mapa con los poligonos de las provincias de RD y colorearas en funcion de 
+    los crimenes dentro de cada poligono, menor cantidad verde y mayor cantidad rojo. y que se modifique
+    de acuerdo al los botones que tienen los dos graficos para visualizar por dia,mes,ano.
+3- anade que tambien pueda visualizar los datos y mapa de los poligonos por rango de fecha.
+4- anade un boton para generar un reporte detallado de los crimenes en ese rango de fecha
+5- permite que en la pagina mapa.html las marcas de las locaciones presenten los datos del sismo y
+    ademas un boton para imprimir los detalles de ese sismo

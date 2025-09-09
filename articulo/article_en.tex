@@ -1,0 +1,77 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\geometry{a4paper, margin=1in}
+
+\title{
+    {\huge Clima Criminal: A Geospatial Tool for Crime Analysis in the Dominican Republic} \\
+    \vspace{0.5cm}
+    \large Justification and Technical Proposal
+}
+
+\author{
+    Lic. Carlos G. Ramirez \\
+    \texttt{carlos.ramirez@email.com} % Placeholder email
+    \and
+    Gemini \\
+    \textit{Large Language Model by Google}
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The Dominican Republic, despite progress in reducing certain crime rates, faces a persistent challenge regarding crime and a high public perception of insecurity. Statistical data, though available, is often scattered and presented in formats that are difficult for the general public, researchers, and civil society organizations to analyze. This article introduces \textbf{Clima Criminal}, an interactive web application designed to centralize, visualize, and analyze crime data at a national level. The platform offers geospatial tools such as heat maps and choropleth maps, dynamic data filters, and report generation, with the aim of democratizing access to information, promoting transparency, and providing a valuable resource for the study of criminal patterns in the country.
+\end{abstract}
+
+\section{Introduction: The Problem of Insecurity}
+
+Public safety is a fundamental pillar for the social and economic development of any nation. In the Dominican Republic, crime is one of the main concerns of the population. According to official data, in 2023 the country recorded a homicide rate of \textbf{11.5 per 100,000 inhabitants}. While this figure represents a decrease compared to previous years, robbery remains the most frequent crime, with over 78,000 cases reported in the same year.
+
+Beyond the official figures, the \textit{perception of insecurity} has a tangible and profound impact on society. Surveys reveal that a large portion of Dominicans have altered their daily routines for fear of being victims of a crime, affecting social cohesion and trust in institutions. This situation creates a critical demand for clear, accessible, and detailed information on crime.
+
+\section{Justification of Need}
+
+The need for a tool like \textbf{Clima Criminal} is based on three main gaps:
+
+\begin{enumerate}
+    \textbf{Data Fragmentation:} Information on crime is published by various government entities (National Police, Attorney General's Office, National Statistics Office). This requires interested parties to consult multiple sources, often with different formats and methodologies, making it difficult to obtain an integrated overview.
+    \textbf{Lack of Accessible Geospatial Analysis:} Traditional statistical reports usually present aggregated data at the national or provincial level. They lack the granularity of an interactive map that allows for the identification of \textit{where} incidents are concentrated, a key factor for citizens and local authorities to make informed decisions about specific risks.
+    \textbf{Gap Between Data and Public Perception:} An open and easy-to-use data platform can help bridge the gap between official statistics and public perception. By allowing anyone to explore the data for themselves, a more informed public debate is fostered, and transparency is strengthened.
+\end{enumerate}
+
+\section{The Proposed Solution: Clima Criminal}
+
+To address these needs, the \textbf{Clima Criminal} application has been developed. It is a web platform built on a modern technology stack (Django, JavaScript, Leaflet.js) that offers the following key functionalities:
+
+\begin{itemize}
+    \textbf{Interactive Visualization:} Heat maps to view crime concentrations and choropleth maps that illustrate the distribution of crime by province.
+    \textbf{Dynamic Filters:} Allows users to filter data by crime type, province, and date ranges, offering complete customization of the analysis.
+    \textbf{Citizen Reporting:} A form for citizens to report incidents, contributing to a richer database (currently as a proof of concept).
+    \textbf{Statistics and Report Generation:} Dynamic charts and the ability to generate printable reports of the filtered data, both at a general and provincial level.
+\end{itemize}
+
+The application's architecture is designed to be scalable, allowing for the future integration of new data sources and more advanced analysis modules.
+
+\section{Conclusion}
+
+\textbf{Clima Criminal} is not just a data visualizer, but an initiative to empower Dominican society with accessible and contextualized information. By providing tools for the geospatial analysis of crime, the platform serves as a valuable resource for citizens, academics, journalists, and policymakers, promoting a greater understanding of the dynamics of security in the Dominican Republic and fostering a culture of evidence-based decision-making.
+
+\begin{thebibliography}{9}
+    \bibitem{ONE2023}
+    National Statistics Office (ONE), Dominican Republic. (2024). \textit{Statistical Yearbooks}.
+    
+    \bibitem{PoliciaNacional2024}
+    National Police of the Dominican Republic. (2024). \textit{Crime Reports and Statistics}.
+    
+    \bibitem{Perception}
+    Studies on the perception of citizen insecurity (various journalistic and academic sources, 2023-2024).
+
+\end{thebibliography}
+
+\end{document}

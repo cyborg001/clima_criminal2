@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Criminal</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'mapa' %}" {% if request.resolver_match.url_name == 'mapa' %}class="active"{% endif %}>Mapa y Estadísticas</a></li>
+                <li><a href="{% url 'reportar' %}" {% if request.resolver_match.url_name == 'reportar' %}class="active"{% endif %}>Reportar Crimen</a></li>
+                <li><a href="{% url 'estadisticas' %}" {% if request.resolver_match.url_name == 'estadisticas' %}class="active"{% endif %}>Informes Estadísticos</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <main id="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Clima Criminal. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+    <script src="https://unpkg.com/leaflet.sync/L.Map.Sync.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Turf.js for spatial analysis -->
+    <script src='https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js'></script>
+    {% block page_scripts %}{% endblock %}
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
