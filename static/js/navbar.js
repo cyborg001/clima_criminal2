@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+    const mainContent = document.getElementById('main-content');
+
+    const adjustMainContentPadding = () => {
+        if (header && mainContent) {
+            const headerHeight = header.offsetHeight;
+            mainContent.style.paddingTop = `${headerHeight}px`;
+        }
+    };
+
     const equalizeNavButtonWidths = () => {
         const navLinks = document.querySelectorAll('header nav ul li a');
         let maxWidth = 0;
@@ -24,6 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const onResize = () => {
+        equalizeNavButtonWidths();
+        adjustMainContentPadding();
+    };
+
     equalizeNavButtonWidths();
-    window.addEventListener('resize', equalizeNavButtonWidths);
+    adjustMainContentPadding();
+    window.addEventListener('resize', onResize);
 });
