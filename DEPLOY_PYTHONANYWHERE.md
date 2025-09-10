@@ -19,7 +19,7 @@ Antes de subir tu código, es crucial ajustar la configuración de Django para u
     *   **`ALLOWED_HOSTS`**: Agrega el dominio de PythonAnywhere.
         ```python
         # Reemplaza <tu-usuario> con tu nombre de usuario de PythonAnywhere
-        ALLOWED_HOSTS = ['<tu-usuario>.pythonanywhere.com']
+        ALLOWED_HOSTS = ['cgrs27.pythonanywhere.com']
         ```
     *   **`STATIC_ROOT`**: Define la carpeta donde se recolectarán todos los archivos estáticos.
         ```python
@@ -43,7 +43,7 @@ Antes de subir tu código, es crucial ajustar la configuración de Django para u
 2.  **Clona tu repositorio:**
     ```bash
     # Reemplaza la URL con la de tu repositorio
-    git clone https://github.com/tu-usuario/clima_criminal.git
+    git clone https://github.com/tu-usuario/clima_criminal2.git
     ```
 
 ---
@@ -75,9 +75,9 @@ Antes de subir tu código, es crucial ajustar la configuración de Django para u
     *   Selecciona la versión de Python que coincida con tu entorno virtual (ej: Python 3.10).
 
 3.  **Configura las rutas:** En la sección **Code** de la pestaña **Web**, establece las rutas:
-    *   **Source code:** `/home/<tu-usuario>/clima_criminal/`
-    *   **Working directory:** `/home/<tu-usuario>/clima_criminal/`
-    *   **Virtualenv:** `/home/<tu-usuario>/.virtualenvs/clima-criminal-env`
+    *   **Source code:** `/home/cgrs27/clima_criminal/`
+    *   **Working directory:** `/home/cgrs27/clima_criminal/`
+    *   **Virtualenv:** `/home/cgrs27/.virtualenvs/clima-criminal-env`
 
     *Recuerda reemplazar `<tu-usuario>` con tu nombre de usuario real.*
 
@@ -87,7 +87,7 @@ Antes de subir tu código, es crucial ajustar la configuración de Django para u
 
 Este es el paso más importante para que PythonAnywhere se comunique con tu aplicación Django.
 
-1.  **Edita el archivo WSGI:** En la sección **Code**, haz clic en el enlace del archivo WSGI (ej: `/var/www/<tu-usuario>_pythonanywhere_com_wsgi.py`).
+1.  **Edita el archivo WSGI:** En la sección **Code**, haz clic en el enlace del archivo WSGI (ej: `/var/www/cgrs27_pythonanywhere_com_wsgi.py`).
 
 2.  **Reemplaza todo el contenido** con el siguiente código:
     ```python
@@ -95,7 +95,7 @@ Este es el paso más importante para que PythonAnywhere se comunique con tu apli
     import sys
 
     # Ruta al directorio de tu proyecto
-    path = '/home/<tu-usuario>/clima_criminal'
+    path = '/home/cgrs27/clima_criminal'
     if path not in sys.path:
         sys.path.insert(0, path)
 
@@ -116,7 +116,7 @@ Este es el paso más importante para que PythonAnywhere se comunique con tu apli
     *   En la pestaña **Web**, ve a la sección **Static files**.
     *   Crea un nuevo mapeo:
         *   **URL:** `/static/`
-        *   **Directory:** `/home/<tu-usuario>/clima_criminal/staticfiles`
+        *   **Directory:** `/home/cgrs27/clima_criminal/staticfiles`
 
 2.  **Recolecta los archivos estáticos:**
     *   Vuelve a tu consola Bash (asegúrate de que el entorno virtual `clima-criminal-env` esté activo).
@@ -139,6 +139,6 @@ Este es el paso más importante para que PythonAnywhere se comunique con tu apli
 
 1.  **Recarga la aplicación:** Vuelve a la pestaña **Web** y haz clic en el gran botón verde **Reload <tu-usuario>.pythonanywhere.com**.
 
-2.  **¡Prueba tu sitio!** Visita tu URL (`https://<tu-usuario>.pythonanywhere.com`) y verifica que todo funcione correctamente.
+2.  **¡Prueba tu sitio!** Visita tu URL (`https://cgrs27.pythonanywhere.com`) y verifica que todo funcione correctamente.
 
 Si encuentras errores, revisa los registros de errores (**Error log** y **Server log**) en la pestaña **Web** para diagnosticar el problema.
