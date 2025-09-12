@@ -78,7 +78,6 @@ Antes de subir tu código, es crucial ajustar la configuración de Django para u
     *   **Source code:** `/home/cgrs27/clima_criminal/`
     *   **Working directory:** `/home/cgrs27/clima_criminal/`
     *   **Virtualenv:** `/home/cgrs27/.virtualenvs/clima-criminal-env`
-
     *Recuerda reemplazar `<tu-usuario>` con tu nombre de usuario real.*
 
 ---
