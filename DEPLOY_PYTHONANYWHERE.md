@@ -53,7 +53,7 @@ Antes de subir tu código, es crucial ajustar la configuración de Django para u
 1.  **Crea el entorno virtual:** En la misma consola Bash, ejecuta el siguiente comando. Asegúrate de usar la misma versión de Python que usaste en tu desarrollo.
     ```bash
     # Reemplaza "3.10" con tu versión de Python si es diferente
-    mkvirtualenv --python=/usr/bin/python3.10 clima-criminal-env
+    mkvirtualenv --python=/usr/bin/python3.13 clima-criminal-env
     ```
     Tu consola cambiará para mostrar que el entorno virtual está activo `(clima-criminal-env)`.
 
@@ -94,7 +94,7 @@ Este es el paso más importante para que PythonAnywhere se comunique con tu apli
     import sys
 
     # Ruta al directorio de tu proyecto
-    path = '/home/cgrs27/clima_criminal'
+    path = '/home/cgrs27/clima_criminal2'
     if path not in sys.path:
         sys.path.insert(0, path)
 
@@ -115,7 +115,7 @@ Este es el paso más importante para que PythonAnywhere se comunique con tu apli
     *   En la pestaña **Web**, ve a la sección **Static files**.
     *   Crea un nuevo mapeo:
         *   **URL:** `/static/`
-        *   **Directory:** `/home/cgrs27/clima_criminal/staticfiles`
+        *   **Directory:** `/home/cgrs27/clima_criminal2/staticfiles`
 
 2.  **Recolecta los archivos estáticos:**
     *   Vuelve a tu consola Bash (asegúrate de que el entorno virtual `clima-criminal-env` esté activo).
@@ -141,3 +141,5 @@ Este es el paso más importante para que PythonAnywhere se comunique con tu apli
 2.  **¡Prueba tu sitio!** Visita tu URL (`https://cgrs27.pythonanywhere.com`) y verifica que todo funcione correctamente.
 
 Si encuentras errores, revisa los registros de errores (**Error log** y **Server log**) en la pestaña **Web** para diagnosticar el problema.
+
+a veces limpiamos el staticfiles con: python manage.py collectstatic --clear --noinput
